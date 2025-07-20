@@ -1,0 +1,64 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+
+    html{scroll-behavior:smooth;}
+
+    body{
+      margin:0 auto;
+      max-width:1200px;
+      padding:0 16px 80px 16px;
+      background:#ffacd3;
+      font-family:sans-serif;
+      color:#000;
+    }
+
+    img{max: width 20px;;display:block;height:auto;}
+    a{text-decoration:none;color:inherit;}
+    ul{list-style:none;}
+    button{cursor:pointer;}
+    .sr-only{position:absolute!important;left:-10px;top:auto;width:1px;height:1px;overflow:hidden;}
+
+    /* ====== TOP NAV ====== */
+    header.nav{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:16px 0;
+      gap:16px;
+    }
+    .nav .logo h1{font-weight:700;font-size:1.8rem;line-height:1;color:#000;white-space:nowrap;}
+    .nav-menu{display:flex;align-items:center;gap:24px;font-weight:600;font-size:1rem;}
+    .nav-menu a{position:relative;padding:2px 0;}
+    .nav-menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:#ff511c;margin:auto;width:50%;}
+
+    .nav-cta{display:flex;align-items:center;gap:8px;}
+    .signin{padding:8px 16px;background:transparent;border:2px solid #ff511c;color:#ff511c;font-weight:700;border-radius:5px;}
+    .signup{padding:8px 16px;background:#ff511c;border:none;color:#fff;font-weight:700;border-radius:5px;}
+
+    /* ====== HERO ====== */
+    .hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:32px;padding:80px 0;}
+    .hero .info h2{font-size:clamp(2rem,5vw,3.75rem);margin-bottom:24px;line-height:1.1;font-weight:700;}
+    .hero .info p{font-size:1.2rem;line-height:1.4;margin-bottom:32px;max-width:36ch;}
+    .hero .info .explore-btn{padding:12px 32px;font-size:1rem;background:#ff511c;border:none;color:#fff;font-weight:700;border-radius:5px;}
+    .hero .image-wrap{text-align:center;}
+    .hero .image-wrap img{max-width:280px;animation:spin 10s linear infinite;}
+
+    @keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+
+    /* ====== POPULAR DISHES GRID ====== */
+    .category{width:100%;display:flex;justify-content:center;margin-top:40px;}
+    .category .list-items{width:100%;max-width:1100px;margin-top:60px;text-align:center;}
+    .category .list-items h3{font-size:1.5rem;font-weight:700;margin-bottom:48px;}
+
+    .card-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:50px;justify-items:center;}
+
+    .card{width:100%;max-width:200px;display:flex;flex-direction:column;align-items:center;padding:16px;border-radius:30px;position:relative;background:#fff;outline:05px solid #faad96;box-shadow:0 8px 20px rgba(250,173,150,.5);}
+    .card img{width:100px;height:100px;object-fit:cover;object-position:center;border-radius:60%;margin-top:-40px;margin-bottom:16px;}
+    .food-title h1{font-size:1rem;font-weight:700;margin-bottom:8px;}
+    .desc-food{font-size:.8rem;line-height:1.2;font-weight:500;margin-bottom:16px;color:#555;}
+    .price{width:100%;display:flex;align-items:center;justify-content:space-between;font-size:1rem;font-weight:700;}
+    .price .add-btn{font-size:1.25rem;line-height:1;border:none;background:none;color:#ff511c;cursor:pointer;}
+
+    /* ====== SCROLLBAR (optional) ====== */
+    ::-webkit-scrollbar{width:10px;}
+    ::-webkit-scrollbar-thumb{border-radius:20px;background:#ff511c;}
